@@ -1,32 +1,31 @@
-# CUDAatScaleForTheEnterpriseCourseProjectTemplate
-This is a template for the course project for the CUDA at Scale for the Enterprise
+# Multiple Images BoxFilter
 
-## Project Description
+This project provides a C++ program to apply a box filter to multiple PGM images using CUDA and NPP. The program takes an input directory containing PGM images, applies a box filter to each image, and saves the filtered images in a specified output directory.
 
-Beyond just being a template for course members, this project can be used by non-course members as the general structure for CUDA projects.
+## Requirements
 
-## Code Organization
+- C++17 compatible compiler (e.g., g++)
+- NVIDIA CUDA Toolkit
+- OpenCV library
+- Make
 
-```bin/```
-This folder should hold all binary/executable code that is built automatically or manually. Executable code should have use the .exe extension or programming language-specific extension.
+## Building the Program
 
-```data/```
-This folder should hold all example data in any format. If the original data is rather large or can be brought in via scripts, this can be left blank in the respository, so that it doesn't require major downloads when all that is desired is the code/structure.
+To compile the program, use the provided `Makefile`. The Makefile will handle the compilation process using `g++`, CUDA, and the necessary OpenCV flags.
 
-```lib/```
-Any libraries that are not installed via the Operating System-specific package manager should be placed here, so that it is easier for inclusion/linking.
 
-```src/```
-The source code should be placed here in a hierarchical fashion, as appropriate.
+### Steps to Build:
 
-```README.md```
-This file should hold the description of the project so that anyone cloning or deciding if they want to clone this repository can understand its purpose to help with their decision.
+1. Open a terminal.
+2. Navigate to the directory containing the `Makefile` and the source code.
+3. Run the following command to compile the program:
 
-```INSTALL```
-This file should hold the human-readable set of instructions for installing the code so that it can be executed. If possible it should be organized around different operating systems, so that it can be done by as many people as possible with different constraints.
+   ```sh
+   make clean build
+4. Then run the final command.
 
-```Makefile or CMAkeLists.txt or build.sh```
-There should be some rudimentary scripts for building your project's code in an automatic fashion.
+   ```sh
+   make run
+   
 
-```run.sh```
-An optional script used to run your executable code, either with or without command-line arguments.
+
